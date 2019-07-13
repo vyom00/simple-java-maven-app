@@ -11,4 +11,5 @@ node {
         finally {
             junit '**/target/*.xml'
         }
-}
+    }
+}   
