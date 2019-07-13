@@ -4,7 +4,7 @@ node {
         sh 'mvn install package'
     }
     stage('test') {
-        test { 
+        try { 
             sh 'mvn test'
         }
         publish {
