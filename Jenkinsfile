@@ -9,7 +9,7 @@ node {
             sh 'mvn test'
         }
         finally {
-            junit '**/target/*.xml'
+            junit '**/target/**/*.xml'
         }
     }
 }   
