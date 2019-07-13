@@ -13,5 +13,6 @@ node {
     }
     stage('deploy'){
        properties([parameters([choice(choices: ['TESTING', 'PROD', 'QA'], description: '', name: 'DEPLOY_ENV')])])
+       echo "Will deploy to ${params.DEPLOY_ENV}"
     }
-} 
+}
