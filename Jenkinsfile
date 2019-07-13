@@ -1,8 +1,7 @@
 node {
-    checkout scm 
-    /* .. snip .. */
-
-stage ('build'){
+    stage('build')
+    node {
+        checkout scm
         sh 'mvn install package'
     }
 }
