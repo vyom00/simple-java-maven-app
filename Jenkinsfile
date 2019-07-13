@@ -1,6 +1,5 @@
 node {
-    stage('build')
-    node {
+    stage('build') {
         checkout scm
         sh 'mvn install package'
     }
@@ -12,4 +11,4 @@ node {
             junit '**/target/**/*.xml'
         }
     }
-}   
+}  
