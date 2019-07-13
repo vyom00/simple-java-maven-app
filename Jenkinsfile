@@ -12,6 +12,6 @@ node {
         }
     }
     stage('deploy'){
-        properties([parameters([string(defaultValue: 'TESTING \\ QA \\ PROD', description: '', name: 'DEVPLOY_ENV', trim: false)])])
+        properties([parameters([string(defaultValue: 'TESTING \n QA \n PROD', description: '', name: 'DEVPLOY_ENV', trim: false)])])
     }
 } 
