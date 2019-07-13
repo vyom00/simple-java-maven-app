@@ -4,10 +4,10 @@ node {
         sh 'mvn install package'
     }
     stage('test') {
-        try { 
+        test { 
             sh 'mvn test'
         }
-        finally {
+        publish {
             junit '**/target/**/*.xml'
         }
     }
