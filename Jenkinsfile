@@ -7,7 +7,7 @@ node {
         try { 
             sh 'mvn test'
         }
-        publish {
+        finally {
             junit '**/target/**/*.xml'
         }
     }
