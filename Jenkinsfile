@@ -11,4 +11,7 @@ node {
             junit '**/target/**/*.xml'
         }
     }
-}  
+    stage('deploy'){
+        properties([parameters([string(defaultValue: 'Testing, qa, Dev', description: '', name: 'DEVPLOY_ENV', trim: false)])])
+    }
+} 
